@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-color:black;color:white;text-align:center">
+
+  <h1>Is this Opera GX?</h1>
+
+  <h1 id="result-text"></h1>
+
+
+  <script>
+    function ready(fn) {
+      if (document.readyState !== 'loading') {
+        fn();
+        return;
+      }
+      document.addEventListener('DOMContentLoaded', fn);
+    }
+
+    ready(function () {
+      var isOperaGx = window.navigator.userAgentData?.toString().indexOf('[object NavigatorUAData]') === 0 && window.navigator.userAgentData?.brands?.some(item => item.brand == "Opera GX")
+      var resultText = document.getElementById("result-text");
+
+      if (isOperaGx) {
+        resultText.style.color = "green";
+        resultText.innerText = "Yes";
+      }
+      else {
+        resultText.style.color = "red";
+        resultText.innerText = "No";
+      }
+
+    })
+  </script>
+
+</body>
+
+</html>
