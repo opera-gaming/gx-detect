@@ -1,5 +1,5 @@
 # gx-detect
-How-to for detecting GX browser in the web page
+How-to for detecting GX browser on the web page.
 
 ### Scenario
 You would like to determine if a site is being visited through Opera GX.
