@@ -18,7 +18,7 @@
     }
 
     ready(function () {
-      var isOperaGx = window.navigator.userAgentData?.toString().indexOf('[object NavigatorUAData]') === 0 && window.navigator.userAgentData?.brands?.some(item => item.brand == "Opera GX")
+      var isOperaGx = window.navigator.userAgentData?.toString().indexOf('[object NavigatorUAData]') === 0 && window.navigator.userAgentData?.brands?.some(item => item.brand.includes("Opera GX"))
       var resultText = document.getElementById("result-text");
 
       if (isOperaGx) {
@@ -34,5 +34,6 @@
   </script>
 
 </body>
+
 
 </html>
