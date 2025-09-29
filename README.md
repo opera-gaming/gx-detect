@@ -10,7 +10,7 @@ That would allow e.g. to decide if a user should see some additional/exclusive c
 The way of checking whether the browser in Opera GX is to call from page scripts:
 
 ```javascript
-window.navigator.userAgentData?.toString().indexOf('[object NavigatorUAData]') === 0 && window.navigator.userAgentData?.brands?.some(item => item.brand == "Opera GX")
+window.navigator.userAgentData?.toString().indexOf('[object NavigatorUAData]') === 0 && window.navigator.userAgentData?.brands?.some(item => item.brand.includes("Opera GX"))
 ```
 
 That statement returns ```true``` if the browser is Opera GX - otherwise it will return ```false```.
